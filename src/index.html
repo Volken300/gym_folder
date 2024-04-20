@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Gym</title>
+  <!-- Required meta tags -->
+  <!--/fonts-->
+  <link href="//fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="assets/css/style-starter.css">
+</head>
+<body>
+  <app-root></app-root>
+  <script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction()
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("movetop").style.display = "block";
+      } else {
+        document.getElementById("movetop").style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+  <!-- /move top -->
+</div>
+</footer>
+<!-- //footer17 -->
+<!-- Template JavaScript -->
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<script src="assets/js/theme-change.js"></script>
+<script src="assets/js/jquery-1.9.1.min.js"></script>
+<!-- faq -->
+<script>
+const items = document.querySelectorAll(".accordion button");
+
+function toggleAccordion() {
+  const itemToggle = this.getAttribute('aria-expanded');
+
+  for (i = 0; i < items.length; i++) {
+    items[i].setAttribute('aria-expanded', 'false');
+  }
+
+  if (itemToggle == 'false') {
+    this.setAttribute('aria-expanded', 'true');
+  }
+}
+
+items.forEach(item => item.addEventListener('click', toggleAccordion));
+</script>
+<!-- //faq -->
+<!--/MENU-JS-->
+<script>
+$(window).on("scroll", function () {
+  var scroll = $(window).scrollTop();
+
+  if (scroll >= 80) {
+    $("#site-header").addClass("nav-fixed");
+  } else {
+    $("#site-header").removeClass("nav-fixed");
+  }
+});
+
+//Main navigation Active Class Add Remove
+$(".navbar-toggler").on("click", function () {
+  $("header").toggleClass("active");
+});
+$(document).on("ready", function () {
+  if ($(window).width() > 991) {
+    $("header").removeClass("active");
+  }
+  $(window).on("resize", function () {
+    if ($(window).width() > 991) {
+      $("header").removeClass("active");
+    }
+  });
+});
+</script>
+<!--//MENU-JS-->
+
+<script src="assets/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
